@@ -7,7 +7,7 @@ class Resource:
 		self.location = location
 		self.description = description
 		self.contact = contact
-		self.uid = uid
+		self._id = uid
 
 	def get_json(self):
 		rv = self.__dict__
