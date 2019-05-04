@@ -16,8 +16,7 @@ def complex_handler(obj):           # used to get the dict representation of cus
 def decoder(obj):              # used to reconstitute custom objects from stored dictionaries
     if '__type__' in obj:
         if obj["__type__"] == 'VolunteerOp':
-            return Volunteer_Op(obj["name"], obj["dates"], obj["location"], obj["description"], obj["contact"],
-                                obj["resource_id"], obj["_id"])
+            return Volunteer_Op(obj["name"], obj["location"], obj["description"], obj["contact"], obj["_id"])
         elif obj["__type__"] == 'Resource':
             return Resource(obj["name"], obj["categories"], obj["location"], obj["description"], obj["contact"],
                             obj["_id"])
