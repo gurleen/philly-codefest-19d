@@ -1,7 +1,7 @@
 <title>Good Samaritan</title>
-<link rel="stylesheet" href="css/flatly.css">
+<link rel="stylesheet" href="{{ style }}">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Good Samaritan</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,31 +11,27 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Volunteer</a>
+        <a class="nav-link" href="/volunteer">Volunteer</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Find Help</a>
+        <a class="nav-link" href="/resources">Find Help</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="/about">About Us</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
 <center>
 	<div class="jumbotron">
-		<h1 class="display-5">Welcome to the Good Samaritan Webservice!</h1>
+		<h1 class="display-5">Welcome to Good Samaritan!</h1>
 	</div>
 	<table>
 		<tr>
 			<td>
 				<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
-					<div class="card-header"><center>Register as a Volunteer</center></div>
+					<a href="/volunteer"><div class="card-header"><center>Register as a Volunteer</center></div></a>
 					<div class="card-body">
 					<h4 class="card-title">Listings for available times</h4>
 					<p class="card-text">Find a time ticket on our calendar to find a specific task or time you want to sign up for.</p>
@@ -44,7 +40,7 @@
 			</td>
 			<td>
 				<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
-					<div class="card-header"><center>Looking for Assistance</center></div>
+					<a href="/resources"><div class="card-header"><center>Looking for Assistance</center></div></a>
 					<div class="card-body">
 					<h4 class="card-title">What you can help you with</h4>
 					<p class="card-text">Good Samaritan offers services ranging from volunteering and food kitchens for those in need</p>
@@ -53,7 +49,7 @@
 			</td>
 			<td>
 				<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
-					<div class="card-header"><center>About us</center></div>
+					<a href="/about"><div class="card-header"><center>About us</center></div></a>
 					<div class="card-body">
 					<h4 class="card-title">Learn about our mission</h4>
 					<p class="card-text">Some statistics and examples on how we help improve society one person at a time.</p>

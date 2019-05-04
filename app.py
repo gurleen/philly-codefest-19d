@@ -1,26 +1,35 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect
+from dbloader import *
+from resource_model import *
+from volunteer_op_model import *
+
 app = Flask(__name__)
+
 
 @app.route('/')
 def home():
-    return 'Hello, world!'
+    style = url_for('static', filename='css/flatly.css')
+    return render_template('index.html', style=style)
 
 @app.route('/resources/')
 def resources():
-    return 'Resources page'
+    style = url_for('static', filename='css/flatly.css')
+    results = get_resources_matching({})
+    return render_template('list_view.html', results=results, style=style, title='Resources')
 
 @app.route('/volunteer/')
 def volunteers():
-    return 'Volunteer page'
+    style = url_for('static', filename='css/flatly.css')
+    results = get_Volunteer_Ops_matching({})
+    return render_template('list_view.html', results=results, style=style)
 
-@app.route('/submit-resource/', methods=['POST', 'GET'])
-def submit_resource():
-    return 'Submit resource'
-
-@app.route('/submit-volunteer/', methods=['POST', 'GET'])
-def submit_volunteer():
-    return 'Submit volunteer'
+@app.route('/submit/', methods=['POST'])
+def submit():
+    result = request.form
+    print(result)
+    return redirect(url_for('resources'))
 
 @app.route('/about')
 def about():
-    return 'About us'
+    style = url_for('static', filename='css/flatly.css')
+    return render_template('about.html', style=style)
