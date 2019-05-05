@@ -35,7 +35,11 @@
     <tbody>
         {% for result in results %}
         <tr class="table-default">
-            <th scope="row">{{result['name']}}</th>
+        	{% if is_res %}
+            	<td><a href="/view-res?id={{ result['_id'] }}">{{result['name']}}</a></td>
+            {% else %}
+            	<td><a href="/view-vol/?id={{ result['_id'] }}">{{result['name']}}</a></td>
+            {% endif %}
             <td>{{result['categories']}}</td>
             <td>{{result['location']}}</td>
             <td>{{result['contact']}}</td>
